@@ -1,0 +1,30 @@
+#内置变量
+
+
+	#标准 AWK 变量  
+		ARGC
+		ARGC 表示在命令行提供的参数的个数 
+		awk 'BEGIN {print "args=", ARGC}' 1 2 3 4
+
+		备注：此时会输出5，因为默认会把awk也当为参数  参数为 awk 1 2 3 4
+
+		ARGV
+		此变量是与环境变量相关的关联数组变量。	
+		awk 'BEGIN { for (i = 0; i < ARGC - 1; i++)
+		{ printf "ARGV[%d]=%s\n", i, ARGV[i]}	
+		}'	1 2 3 5
+
+
+		CONVFMT
+		此变量表示数据转换为字符串的格式，其默认值为 %.6g。
+		awk 'BEGIN { print "Conversion Format =", CONVFMT }'
+
+		ENVIRON
+		此变量是与环境变量相关的关联数组变量。
+		awk 'BEGIN { print ENVIRON["USER"] }'
+
+		FILENAME
+		此变量表示当前文件名称。
+		awk 'END {print FILENAME}' marks.txt
+
+		
