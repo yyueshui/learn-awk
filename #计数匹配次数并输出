@@ -1,0 +1,2 @@
+#计数匹配次数并输出
+awk '/a/{++cnt} END {print "count=, cnt}' mark.txt

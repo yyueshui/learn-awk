@@ -1,0 +1,2 @@
+#打印列或域
+cat mark.txt | awk '{print $3 "\t" $4}'

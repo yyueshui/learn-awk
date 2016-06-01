@@ -1,0 +1,3 @@
+#--dump-variables[=file]
+#此选项会将全局变量及相应值按序输出到指定文件中。默认的输出文件名是 awkvars.out。
+awk --dump-variables ''
