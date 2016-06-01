@@ -1,0 +1,2 @@
+#分析线程栈
+ps aux | grep nginx | awk '{print $2}' | xargs pmap | awk '{if($4=="[") print $2 "\t " $5; else print $2 "\t" $4;}' | sort -n
